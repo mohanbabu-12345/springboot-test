@@ -29,4 +29,11 @@ public class EmployeeImp implements EmployeeInterface {
                 .get(0);
         return e;
     }
+
+    @Override
+    public List<Employee> sortByName() {
+        return dao.getAllEmployeeDeatils().stream()
+                .sorted((a,b)->a.getName().compareTo(b.getName()))
+                .collect(Collectors.toList());
+    }
 }
