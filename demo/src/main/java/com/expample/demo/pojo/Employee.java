@@ -5,12 +5,19 @@ public class Employee {
     private String name;
     private Double salary;
     private Integer age;
+     private String gender;
+     private String department;
+     private Integer dateOfJoining;
 
-    public Employee(Integer id, String name, Double salary, Integer age) {
+
+    public Employee(Integer id, String name, Double salary, Integer age, String gender, String department, Integer dateOfJoining) {
         this.id = id;
         this.name = name;
         this.salary = salary;
         this.age = age;
+        this.gender = gender;
+        this.department = department;
+        this.dateOfJoining = dateOfJoining;
     }
 
     public Integer getId() {
@@ -41,6 +48,30 @@ public class Employee {
         return age;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public Integer getDateOfJoining() {
+        return dateOfJoining;
+    }
+
+    public void setDateOfJoining(Integer dateOfJoining) {
+        this.dateOfJoining = dateOfJoining;
+    }
+
     public void setAge(Integer age) {
         this.age = age;
     }
@@ -52,6 +83,9 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
                 ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", department='" + department + '\'' +
+                ", dateOfJoining=" + dateOfJoining +
                 '}';
     }
 }
